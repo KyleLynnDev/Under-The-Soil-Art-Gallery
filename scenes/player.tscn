@@ -1,0 +1,99 @@
+[gd_scene load_steps=5 format=3 uid="uid://dugy4kogfkw5c"]
+
+[ext_resource type="Texture2D" uid="uid://cafuuiskb1hbc" path="res://icon.svg" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://cokivmtwcuse0" path="res://scripts/playerController.gd" id="1_g2els"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g2els"]
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_qhqgy"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_g2els")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_g2els")
+
+[node name="Pivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5333, 0)
+
+[node name="Head" type="Node3D" parent="Pivot"]
+
+[node name="FPCamera" type="Camera3D" parent="Pivot/Head"]
+
+[node name="TPSpringarm" type="SpringArm3D" parent="Pivot"]
+shape = SubResource("SeparationRayShape3D_qhqgy")
+spring_length = 3.0
+
+[node name="TPCamera" type="Camera3D" parent="Pivot/TPSpringarm"]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Interaction Prompt" type="Panel" parent="UI"]
+visible = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 522.0
+offset_top = 5.0
+offset_right = -543.0
+offset_bottom = 32.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="UI/Interaction Prompt"]
+layout_mode = 0
+offset_right = 241.0
+offset_bottom = 39.0
+text = "Observe"
+
+[node name="inspectOverlay" type="Control" parent="UI"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="UI/inspectOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = 36.0
+offset_right = -42.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Art Title" type="Label" parent="UI/inspectOverlay/Panel"]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 460.0
+offset_right = 518.0
+offset_bottom = 483.0
+text = "Title"
+
+[node name="Art Closeup" type="TextureRect" parent="UI/inspectOverlay/Panel"]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 27.0
+offset_right = 825.0
+offset_bottom = 449.0
+texture = ExtResource("1_3vyb7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/inspectOverlay/Panel"]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 500.0
+offset_right = 908.0
+offset_bottom = 567.0
+theme_override_constants/separation = 95
+
+[node name="Artist Social" type="Button" parent="UI/inspectOverlay/Panel/HBoxContainer"]
+layout_mode = 2
+text = "Artist Social Media"
+
+[node name="Close" type="Button" parent="UI/inspectOverlay/Panel/HBoxContainer"]
+layout_mode = 2
+text = "Close"
