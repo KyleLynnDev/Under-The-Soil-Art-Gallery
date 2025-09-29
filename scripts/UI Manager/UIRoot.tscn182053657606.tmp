@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://1pv5v8qvciuf"]
+
+[ext_resource type="Script" uid="uid://drcwtr71pt34s" path="res://Utilities/UI Manager/UIManager.gd" id="1_hww7i"]
+[ext_resource type="PackedScene" uid="uid://cq42chk6dlblw" path="res://Utilities/UI Manager/pause/pause.tscn" id="2_j171u"]
+[ext_resource type="PackedScene" uid="uid://duyc66grxg4ii" path="res://Utilities/UI Manager/inventory/inventory.tscn" id="3_sn15t"]
+[ext_resource type="PackedScene" uid="uid://cpawserxk0i3x" path="res://Utilities/UI Manager/map/map.tscn" id="4_aim4f"]
+[ext_resource type="PackedScene" uid="uid://dgdreq3lub32o" path="res://Utilities/UI Manager/questLog/questLog.tscn" id="5_di4wc"]
+
+[node name="UiRoot" type="CanvasLayer"]
+script = ExtResource("1_hww7i")
+
+[node name="Pause" parent="." instance=ExtResource("2_j171u")]
+unique_name_in_owner = true
+visible = false
+modal = null
+
+[node name="Inventory" parent="." instance=ExtResource("3_sn15t")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Map" parent="." instance=ExtResource("4_aim4f")]
+unique_name_in_owner = true
+visible = false
+
+[node name="QuestLog" parent="." instance=ExtResource("5_di4wc")]
+unique_name_in_owner = true
+visible = false

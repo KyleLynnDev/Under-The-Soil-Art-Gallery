@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://doso2jsgo7s1e"]
+
+[ext_resource type="Script" uid="uid://vymjk8bbkebv" path="res://scripts/kill_plane.gd" id="1_gjrqp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2cwnn"]
+size = Vector3(500, 1, 500)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gjrqp"]
+albedo_color = Color(1, 0, 1, 0)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_lgtut"]
+material = SubResource("StandardMaterial3D_gjrqp")
+size = Vector2(500, 500)
+
+[node name="Kill Plane" type="Area3D"]
+script = ExtResource("1_gjrqp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_2cwnn")
+
+[node name="Visual" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_lgtut")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

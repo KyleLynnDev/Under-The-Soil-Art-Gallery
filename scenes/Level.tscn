@@ -1,4 +1,32 @@
-[gd_scene load_steps=6 format=4 uid="uid://di7ifm1lwks8i"]
+[gd_scene load_steps=42 format=3 uid="uid://di7ifm1lwks8i"]
+
+[ext_resource type="PackedScene" uid="uid://bmlnclklucnuh" path="res://scenes/island_export.tscn" id="1_uhqny"]
+[ext_resource type="Shader" uid="uid://c8vp4r0o8cymf" path="res://assets/shaders/skybox.gdshader" id="2_6vs76"]
+[ext_resource type="Texture2D" uid="uid://3sd65co7bgtu" path="res://assets/shaders/skybox texture.png" id="3_kl8ac"]
+[ext_resource type="Script" uid="uid://cqt5shka0rhfa" path="res://scripts/shakable_object.gd" id="4_faw0r"]
+[ext_resource type="AudioStream" uid="uid://dlt236vh0xksq" path="res://assets/sound/Fantozzi-SandR1.ogg" id="5_2eouu"]
+[ext_resource type="AudioStream" uid="uid://c4chhd28togry" path="res://assets/sound/Fantozzi-SandR2.ogg" id="6_rccsh"]
+[ext_resource type="AudioStream" uid="uid://dsv5a5ggslgrq" path="res://assets/sound/Fantozzi-SandR3.ogg" id="7_ax7ne"]
+[ext_resource type="Texture2D" uid="uid://cf3ysm6mbjghw" path="res://assets/images/SUNFLOWER.PNG" id="8_sv41r"]
+[ext_resource type="Texture2D" uid="uid://7bo0ksybfqdn" path="res://assets/images/sunflower3.png" id="9_p6oy6"]
+[ext_resource type="Texture2D" uid="uid://c7a546eikkhmj" path="res://assets/images/FlowersFortheGrave_DhivyaRavi.jpg" id="10_ax7ne"]
+[ext_resource type="Texture2D" uid="uid://dh4dof5g8rs1y" path="res://assets/images/Gamepad Layout.png" id="11_opqd1"]
+[ext_resource type="FontFile" uid="uid://bram4slrgawm5" path="res://assets/fonts/Beanstalk.ttf" id="11_sv41r"]
+[ext_resource type="Texture2D" uid="uid://bru2t0772wnvr" path="res://assets/images/CHERISE_heismay_thief_expanded.png" id="12_sv41r"]
+[ext_resource type="Texture2D" uid="uid://da6mujb8byrd8" path="res://assets/images/PRESTON  Sunflowers.png" id="14_opqd1"]
+[ext_resource type="Texture2D" uid="uid://gptrhjhi485x" path="res://assets/images/Timothy_McKague_Valley_of_Gardening_Spirits-1.png" id="15_xyj84"]
+[ext_resource type="Texture2D" uid="uid://bs01ewo8ekqge" path="res://assets/images/ZIONNA MEL untitled.png" id="16_witbp"]
+[ext_resource type="Texture2D" uid="uid://c8ui8ubx1svfu" path="res://assets/images/CHEESEDCAKE together we bloom.png" id="17_kflc5"]
+[ext_resource type="Texture2D" uid="uid://c42u5r4ffq1dp" path="res://assets/images/DOPPLE clarity.png" id="18_itu0t"]
+[ext_resource type="Texture2D" uid="uid://c2fkjnfx0j65c" path="res://assets/images/VELA beautiful as a grub.jpeg" id="19_4no8g"]
+[ext_resource type="Texture2D" uid="uid://d0vu56vixtoxv" path="res://assets/images/Utopian-Sanctuary.jpg" id="20_kja0s"]
+[ext_resource type="Texture2D" uid="uid://b24oeyp2aslf1" path="res://assets/images/MAKO sleeping giant.jpeg" id="21_48r4s"]
+[ext_resource type="Texture2D" uid="uid://vuny0ig0eiej" path="res://assets/images/Choose_The_Bear_&_Wolves (1).png" id="22_p3doa"]
+[ext_resource type="Texture2D" uid="uid://ow6wov2qi1a4" path="res://assets/images/Enchanted_Forest.png" id="23_2sboe"]
+[ext_resource type="Texture2D" uid="uid://dg01ivsvkuba2" path="res://assets/images/Our Hopes.png" id="24_baq46"]
+[ext_resource type="Texture2D" uid="uid://cgq161koi5o1h" path="res://assets/images/WCC Group Lessons from Nature.png" id="25_nbaxu"]
+[ext_resource type="Texture2D" uid="uid://bpp8cjsjus1le" path="res://assets/images/We_Were_Seeds (1).png" id="26_nu2gi"]
+[ext_resource type="PackedScene" uid="uid://doso2jsgo7s1e" path="res://scenes/kill_plane.tscn" id="27_kflc5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_q3wo1"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -12,19 +40,57 @@ background_mode = 2
 sky = SubResource("Sky_uhqny")
 tonemap_mode = 2
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_q3wo1"]
-_surfaces = [{
-"aabb": AABB(-0.5, -0.25, -0.5, 1, 0.5, 1),
-"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
-"format": 34359738391,
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 36,
-"vertex_data": PackedByteArray("AAAAvwAAgL4AAAA/AAAAvwAAgL4AAAC/AAAAvwAAgD4AAAC/AAAAPwAAgL4AAAC/AAAAvwAAgL4AAAC/AAAAvwAAgL4AAAA/AAAAvwAAgD4AAAC/AAAAvwAAgL4AAAC/AAAAPwAAgL4AAAC/AAAAvwAAgD4AAAC/AAAAvwAAgD4AAAA/AAAAvwAAgL4AAAA/AAAAvwAAgL4AAAA/AAAAvwAAgD4AAAA/AAAAPwAAgD4AAAA/AAAAPwAAgD4AAAA/AAAAvwAAgD4AAAA/AAAAvwAAgD4AAAC/AAAAvwAAgL4AAAA/AAAAPwAAgL4AAAA/AAAAPwAAgL4AAAC/AAAAPwAAgD4AAAA/AAAAPwAAgL4AAAA/AAAAvwAAgL4AAAA/AAAAPwAAgL4AAAC/AAAAPwAAgL4AAAA/AAAAPwAAgD4AAAA/AAAAPwAAgL4AAAC/AAAAPwAAgD4AAAC/AAAAvwAAgD4AAAC/AAAAvwAAgD4AAAC/AAAAPwAAgD4AAAC/AAAAPwAAgD4AAAA/AAAAPwAAgD4AAAA/AAAAPwAAgD4AAAC/AAAAPwAAgL4AAAC/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
-}]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qifjx"]
+render_priority = 0
+shader = ExtResource("2_6vs76")
+shader_parameter/sky_texture = ExtResource("3_kl8ac")
+shader_parameter/lock_aspect = false
+shader_parameter/aspect_ratio = 1.33333
+shader_parameter/fov = Vector2(180, 90)
+shader_parameter/tiling = Vector2i(1, 1)
+shader_parameter/offset = Vector2(0, 0)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_uhqny"]
-data = PackedVector3Array(-0.5, -0.25, 0.5, -0.5, -0.25, -0.5, -0.5, 0.25, -0.5, 0.5, -0.25, -0.5, -0.5, -0.25, -0.5, -0.5, -0.25, 0.5, -0.5, 0.25, -0.5, -0.5, -0.25, -0.5, 0.5, -0.25, -0.5, -0.5, 0.25, -0.5, -0.5, 0.25, 0.5, -0.5, -0.25, 0.5, -0.5, -0.25, 0.5, -0.5, 0.25, 0.5, 0.5, 0.25, 0.5, 0.5, 0.25, 0.5, -0.5, 0.25, 0.5, -0.5, 0.25, -0.5, -0.5, -0.25, 0.5, 0.5, -0.25, 0.5, 0.5, -0.25, -0.5, 0.5, 0.25, 0.5, 0.5, -0.25, 0.5, -0.5, -0.25, 0.5, 0.5, -0.25, -0.5, 0.5, -0.25, 0.5, 0.5, 0.25, 0.5, 0.5, -0.25, -0.5, 0.5, 0.25, -0.5, -0.5, 0.25, -0.5, -0.5, 0.25, -0.5, 0.5, 0.25, -0.5, 0.5, 0.25, 0.5, 0.5, 0.25, 0.5, 0.5, 0.25, -0.5, 0.5, -0.25, -0.5)
+[sub_resource type="BoxMesh" id="BoxMesh_dke22"]
+material = SubResource("ShaderMaterial_qifjx")
+flip_faces = true
+size = Vector3(1000, 1000, 1000)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7do7u"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_aneau"]
+angle_min = -379.4
+angle_max = 530.3
+radial_velocity_min = -2.23517e-05
+radial_velocity_max = 5.11998
+gravity = Vector3(0, 9.8, 0)
+turbulence_noise_strength = 13.08
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r71gv"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.32549, 0.411765, 0.678431, 1)
+emission = Color(1, 1, 0.65098, 1)
+texture_filter = 0
+billboard_mode = 1
+point_size = 8.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_dkf7v"]
+material = SubResource("StandardMaterial3D_r71gv")
+size = Vector2(0.1, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_m0xki"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m0xki"]
+albedo_color = Color(0.498039, 0.286275, 0.960784, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xe3hh"]
+material = SubResource("StandardMaterial3D_m0xki")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p6oy6"]
+albedo_color = Color(0.487484, 0.38396, 0.17529, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_opqd1"]
+material = SubResource("StandardMaterial3D_p6oy6")
 
 [node name="Level" type="Node3D"]
 
@@ -35,24 +101,2270 @@ environment = SubResource("Environment_k5jlv")
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(46.3783, 0, 0, 0, 1, 0, 0, 0, 40.1905, 0, -0.25, 0)
-use_collision = true
-size = Vector3(1, 0.5, 1)
+[node name="Area3D" type="Area3D" parent="."]
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(46.3783, 0, 0, 0, 1, 0, 0, 0, 40.1905, 0, -0.25, 0)
-mesh = SubResource("ArrayMesh_q3wo1")
+[node name="Island Export" parent="Area3D" instance=ExtResource("1_uhqny")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.78925, 401.29, -10.1008)
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(46.3783, 0, 0, 0, 1, 0, 0, 0, 40.1905, 0, -0.25, 0)
-shape = SubResource("ConcavePolygonShape3D_uhqny")
+[node name="Cube_005" parent="Area3D/Island Export" index="103"]
+transform = Transform3D(2.85961, 0, 0, 0, 1.30994, -0.160929, 0, 0.226894, 0.929102, 0, 20.8177, 87.4963)
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.87603, 0, -3.46314)
+[node name="Skybox" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 577.939, 0)
+mesh = SubResource("BoxMesh_dke22")
 
-[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.20721, 0, 2.33478)
+[node name="Sunflowers" type="Node3D" parent="."]
 
-[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.20721, 0, -3.94941)
+[node name="Sunflower" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.949, 411.614, 7.2685)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sunflower19" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.949, 411.614, 9.96997)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower19"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower19/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower19"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower19"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower19"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower19/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower19/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower19/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sunflower20" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0377, 411.614, 11.7398)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower20"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower20/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower20"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower20"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower20"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower20/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower20/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower20/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sunflower21" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0207, 411.614, 17.1474)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower21"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower21/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower21"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower21"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower21"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower21/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower21/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower21/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sunflower22" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.217, 411.614, 3.83312)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower22"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower22/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower22"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower22"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower22"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower22/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower22/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower22/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sunflower23" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.9253, 411.614, 4.97432)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower23"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower23/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower23"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower23"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower23"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower23/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower23/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower23/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sunflower24" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.2707, 411.614, -1.53261)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower24"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower24/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower24"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower24"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower24"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower24/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower24/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower24/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sunflower25" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.7531, 411.614, 0.890166)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower25"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower25/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower25"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower25"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower25"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower25/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower25/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower25/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sunflower26" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.9669, 411.614, 0.890166)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower26"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower26/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower26"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower26"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower26"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower26/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower26/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower26/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sunflower27" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.9543, 411.614, 22.3406)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower27"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower27/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower27"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower27"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower27"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower27/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower27/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower27/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sunflower28" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.465, 411.614, 22.3406)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower28"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower28/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower28"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower28"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower28"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower28/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower28/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower28/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sunflower29" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.5621, 411.614, 7.60791)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower29"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower29/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower29"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower29"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower29"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower29/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower29/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower29/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sunflower30" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.2931, 411.614, 7.60791)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower30"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower30/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower30"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower30"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower30"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower30/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower30/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower30/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sunflower31" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.9913, 411.614, 12.6031)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower31"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower31/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower31"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower31"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower31"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower31/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower31/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower31/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sunflower32" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.3984, 411.614, -3.39315)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower32"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower32/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower32"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower32"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower32"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower32/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower32/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower32/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sunflower33" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7136, 411.614, -3.39315)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower33"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower33/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower33"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower33"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower33"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower33/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower33/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower33/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sunflower34" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.3787, 411.614, 1.83586)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower34"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower34/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower34"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower34"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower34"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower34/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower34/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower34/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("9_p6oy6")
+
+[node name="Sunflower2" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.4872, 411.614, 7.2685)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower2"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower2"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower2"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower2/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower2/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower2/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sunflower3" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.4872, 411.614, 11.3991)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower3/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower3"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower3"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower3"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower3/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower3/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower3/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sunflower4" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.2833, 411.614, 11.3991)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower4/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower4"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower4"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower4"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower4/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower4/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower4/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sunflower5" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7332, 411.614, 18.6764)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower5/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower5"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower5"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower5"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower5/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower5/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower5/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sunflower6" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.0138, 411.614, 26.8431)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower6/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower6"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower6"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower6"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower6/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower6/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower6/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sunflower9" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9847, 411.614, 19.9691)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower9/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower9"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower9"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower9"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower9/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower9/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower9/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sunflower10" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.8863, 411.614, 29.7749)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower10"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower10/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower10"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower10"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower10"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower10/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower10/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower10/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sunflower11" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.8863, 411.614, -0.775234)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower11"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower11/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower11"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower11"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower11"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower11/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower11/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower11/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sunflower12" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.2829, 411.614, 2.03162)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower12"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower12/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower12"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower12"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower12"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower12/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower12/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower12/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sunflower13" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.6416, 411.614, -3.50068)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower13"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower13/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower13"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower13"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower13"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower13/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower13/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower13/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sunflower14" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.3301, 411.614, 4.23208)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower14"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower14/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower14"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower14"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower14"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower14/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower14/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower14/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sunflower15" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.0453, 411.614, 7.45485)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower15"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower15/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower15"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower15"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower15"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower15/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower15/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower15/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sunflower16" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.6708, 411.614, 17.9632)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower16"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower16/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower16"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower16"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower16"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower16/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower16/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower16/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sunflower17" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.6651, 411.614, 29.2655)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower17"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower17/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower17"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower17"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower17"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower17/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower17/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower17/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sunflower18" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.0285, 411.614, 24.0181)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower18"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower18/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower18"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower18"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower18"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower18/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower18/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower18/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sunflower7" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.7271, 411.614, 13.4672)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower7/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower7"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower7"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower7"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower7/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower7/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower7/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sunflower8" type="Node3D" parent="Sunflowers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.4227, 411.614, 10.0581)
+script = ExtResource("4_faw0r")
+sfx = Array[AudioStream]([ExtResource("5_2eouu"), ExtResource("6_rccsh"), ExtResource("7_ax7ne")])
+
+[node name="Area3D" type="Area3D" parent="Sunflowers/Sunflower8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sunflowers/Sunflower8/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.497282, 0)
+shape = SubResource("SphereShape3D_7do7u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sunflowers/Sunflower8"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Sunflowers/Sunflower8"]
+transform = Transform3D(0.2, 0, 0, 0, -0.199983, -0.0026319, 0, 0.0026319, -0.199983, 0, 0, 0)
+emitting = false
+amount_ratio = 0.4918
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.69
+randomness = 0.93
+process_material = SubResource("ParticleProcessMaterial_aneau")
+draw_pass_1 = SubResource("QuadMesh_dkf7v")
+
+[node name="visual" type="Node3D" parent="Sunflowers/Sunflower8"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Sunflowers/Sunflower8/visual"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Sunflowers/Sunflower8/visual"]
+transform = Transform3D(3, 0, 5.19615, 0, 6, 0, -5.19615, 0, 3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Sunflowers/Sunflower8/visual"]
+transform = Transform3D(-3, 0, 5.19615, 0, 6, 0, -5.19615, 0, -3, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("8_sv41r")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -82.6121, 429.667, -7.05552)
+light_energy = 15.515
+spot_range = 12.5702
+spot_angle = 66.0938
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="."]
+transform = Transform3D(0.940727, 3.72529e-09, 0.339165, -0.334388, -0.167251, 0.927476, 0.0567255, -0.985914, -0.157337, -97.0992, 429.731, 8.30258)
+light_energy = 15.515
+spot_range = 12.5702
+spot_angle = 66.0938
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -103.311, 427.355, -23.1604)
+light_energy = 15.515
+spot_range = 12.5702
+spot_angle = 66.0938
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -79.1748, 428.379, -54.6725)
+light_energy = 15.515
+spot_range = 12.5702
+spot_angle = 66.0938
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -74.1267, 428.868, 34.5855)
+light_energy = 15.515
+spot_range = 12.5702
+spot_angle = 66.0938
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.814085, 2.53852e-08, -0.580746, 0.580746, 3.55848e-08, -0.814085, 0, -1, -4.37114e-08, 7.85407, 411.358, -9.68522)
+light_energy = 15.515
+spot_range = 12.5702
+spot_angle = 51.3
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-3.49691e-08, 0, -0.8, 0, 0.8, 0, 0.8, 0, -3.49691e-08, 8.45911, 415.797, -10.2143)
+texture = ExtResource("11_opqd1")
+
+[node name="Art" type="Node3D" parent="."]
+
+[node name="easel3" type="Node3D" parent="Art"]
+transform = Transform3D(0.134807, 0.754426, 0.0806732, -0.0216251, 2.98498, -0.0604609, -0.0615141, 0.603953, 0.198049, 57.9593, 412.529, -37.0122)
+
+[node name="easel part" type="MeshInstance3D" parent="Art/easel3"]
+transform = Transform3D(1, -7.45058e-08, 1.49012e-08, -1.16415e-10, 1, 0, 1.49012e-08, -9.53674e-07, 1, 0, 0, 6.10352e-05)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part2" type="MeshInstance3D" parent="Art/easel3"]
+transform = Transform3D(0.996724, 0.279686, -0.0736297, 0.00166599, 0.85779, 0.0374381, 0.0825259, -7.04446, 0.854513, -0.543549, 0.310074, 15.1786)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part3" type="MeshInstance3D" parent="Art/easel3"]
+transform = Transform3D(0.88763, 0.125836, -0.038565, 0.00038373, 1.67135, 0.019609, 0.0384001, -6.40281, 0.96228, 0.599823, 1.10425, 3.39874)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part5" type="MeshInstance3D" parent="Art/easel3"]
+transform = Transform3D(0.989293, 0.273592, -0.136404, 0.0111663, -0.271918, 0.0693566, -0.0203041, -13.1972, -0.272062, -0.127655, 0.6008, 6.66394)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part4" type="MeshInstance3D" parent="Art/easel3"]
+transform = Transform3D(1.54039, -11.8591, -0.0385651, 0.0432272, 2.40163, 0.019609, -0.0965537, -9.74131, 0.96228, 6.97208, 0.762238, 4.9964)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel2" type="Node3D" parent="Art"]
+transform = Transform3D(0.146555, 0.303474, -0.0402767, -0.0216251, 2.98498, -0.0604609, 0.0218798, 0.917509, 0.210022, 57.9593, 412.529, 12.0086)
+
+[node name="easel part" type="MeshInstance3D" parent="Art/easel2"]
+transform = Transform3D(1, -7.45058e-08, 1.49012e-08, -1.16415e-10, 1, 0, 1.49012e-08, -9.53674e-07, 1, 0, 0, 6.10352e-05)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part2" type="MeshInstance3D" parent="Art/easel2"]
+transform = Transform3D(0.996724, 0.279686, -0.0736297, 0.00166599, 0.85779, 0.0374381, 0.0825259, -7.04446, 0.854513, -0.543549, 0.310074, 15.1786)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part3" type="MeshInstance3D" parent="Art/easel2"]
+transform = Transform3D(0.88763, 0.125836, -0.038565, 0.00038373, 1.67135, 0.019609, 0.0384001, -6.40281, 0.96228, 0.599823, 1.10425, 3.39874)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part5" type="MeshInstance3D" parent="Art/easel2"]
+transform = Transform3D(0.989293, 0.273592, -0.136404, 0.0111663, -0.271918, 0.0693566, -0.0203041, -13.1972, -0.272062, -0.127655, 0.6008, 6.66394)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part4" type="MeshInstance3D" parent="Art/easel2"]
+transform = Transform3D(1.54039, -11.8591, -0.0385651, 0.0432272, 2.40163, 0.019609, -0.0965537, -9.74131, 0.96228, 6.97208, 0.762238, 4.9964)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel4" type="Node3D" parent="Art"]
+transform = Transform3D(0.0167968, -0.8077, -0.21329, -0.0216251, 2.98498, -0.0604609, 0.147224, 0.530602, 0.0154535, -70.4744, 421.734, 33.9259)
+
+[node name="easel part" type="MeshInstance3D" parent="Art/easel4"]
+transform = Transform3D(1, -7.45058e-08, 1.49012e-08, -1.16415e-10, 1, 0, 1.49012e-08, -9.53674e-07, 1, 0, 0, 6.10352e-05)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part2" type="MeshInstance3D" parent="Art/easel4"]
+transform = Transform3D(0.996724, 0.279686, -0.0736297, 0.00166599, 0.85779, 0.0374381, 0.0825259, -7.04446, 0.854513, -0.543549, 0.310074, 15.1786)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part3" type="MeshInstance3D" parent="Art/easel4"]
+transform = Transform3D(0.88763, 0.125836, -0.038565, 0.00038373, 1.67135, 0.019609, 0.0384001, -6.40281, 0.96228, 0.599823, 1.10425, 3.39874)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part5" type="MeshInstance3D" parent="Art/easel4"]
+transform = Transform3D(0.989293, 0.273592, -0.136404, 0.0111663, -0.271918, 0.0693566, -0.0203041, -13.1972, -0.272062, -0.127655, 0.6008, 6.66394)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part4" type="MeshInstance3D" parent="Art/easel4"]
+transform = Transform3D(1.54039, -11.8591, -0.0385651, 0.0432272, 2.40163, 0.019609, -0.0965537, -9.74131, 0.96228, 6.97208, 0.762238, 4.9964)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel9" type="Node3D" parent="Art"]
+transform = Transform3D(-0.146555, -0.303474, 0.0402767, -0.0216251, 2.98498, -0.0604609, -0.0218798, -0.917509, -0.210022, -22.2109, 412.755, -39.8117)
+
+[node name="easel part" type="MeshInstance3D" parent="Art/easel9"]
+transform = Transform3D(1, -7.45058e-08, 1.49012e-08, -1.16415e-10, 1, 0, 1.49012e-08, -9.53674e-07, 1, 0, 0, 6.10352e-05)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part2" type="MeshInstance3D" parent="Art/easel9"]
+transform = Transform3D(0.996724, 0.279686, -0.0736297, 0.00166599, 0.85779, 0.0374381, 0.0825259, -7.04446, 0.854513, -0.543549, 0.310074, 15.1786)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part3" type="MeshInstance3D" parent="Art/easel9"]
+transform = Transform3D(0.88763, 0.125836, -0.038565, 0.00038373, 1.67135, 0.019609, 0.0384001, -6.40281, 0.96228, 0.599823, 1.10425, 3.39874)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part5" type="MeshInstance3D" parent="Art/easel9"]
+transform = Transform3D(0.989293, 0.273592, -0.136404, 0.0111663, -0.271918, 0.0693566, -0.0203041, -13.1972, -0.272062, -0.127655, 0.6008, 6.66394)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part4" type="MeshInstance3D" parent="Art/easel9"]
+transform = Transform3D(1.54039, -11.8591, -0.0385651, 0.0432272, 2.40163, 0.019609, -0.0965537, -9.74131, 0.96228, 6.97208, 0.762238, 4.9964)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel5" type="Node3D" parent="Art"]
+transform = Transform3D(-0.146555, -0.303474, 0.0402767, -0.0216251, 2.98498, -0.0604609, -0.0218798, -0.917509, -0.210022, -82.3366, 420.95, -7.89216)
+
+[node name="easel part" type="MeshInstance3D" parent="Art/easel5"]
+transform = Transform3D(1, -7.45058e-08, 1.49012e-08, -1.16415e-10, 1, 0, 1.49012e-08, -9.53674e-07, 1, 0, 0, 6.10352e-05)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part2" type="MeshInstance3D" parent="Art/easel5"]
+transform = Transform3D(0.996724, 0.279686, -0.0736297, 0.00166599, 0.85779, 0.0374381, 0.0825259, -7.04446, 0.854513, -0.543549, 0.310074, 15.1786)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part3" type="MeshInstance3D" parent="Art/easel5"]
+transform = Transform3D(0.88763, 0.125836, -0.038565, 0.00038373, 1.67135, 0.019609, 0.0384001, -6.40281, 0.96228, 0.599823, 1.10425, 3.39874)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part5" type="MeshInstance3D" parent="Art/easel5"]
+transform = Transform3D(0.989293, 0.273592, -0.136404, 0.0111663, -0.271918, 0.0693566, -0.0203041, -13.1972, -0.272062, -0.127655, 0.6008, 6.66394)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part4" type="MeshInstance3D" parent="Art/easel5"]
+transform = Transform3D(1.54039, -11.8591, -0.0385651, 0.0432272, 2.40163, 0.019609, -0.0965537, -9.74131, 0.96228, 6.97208, 0.762238, 4.9964)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel7" type="Node3D" parent="Art"]
+transform = Transform3D(-0.146555, -0.303474, 0.0402767, -0.0216251, 2.98498, -0.0604609, -0.0218798, -0.917509, -0.210022, -103.991, 417.949, -22.1857)
+
+[node name="easel part" type="MeshInstance3D" parent="Art/easel7"]
+transform = Transform3D(1, -7.45058e-08, 1.49012e-08, -1.16415e-10, 1, 0, 1.49012e-08, -9.53674e-07, 1, 0, 0, 6.10352e-05)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part2" type="MeshInstance3D" parent="Art/easel7"]
+transform = Transform3D(0.996724, 0.279686, -0.0736297, 0.00166599, 0.85779, 0.0374381, 0.0825259, -7.04446, 0.854513, -0.543549, 0.310074, 15.1786)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part3" type="MeshInstance3D" parent="Art/easel7"]
+transform = Transform3D(0.88763, 0.125836, -0.038565, 0.00038373, 1.67135, 0.019609, 0.0384001, -6.40281, 0.96228, 0.599823, 1.10425, 3.39874)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part5" type="MeshInstance3D" parent="Art/easel7"]
+transform = Transform3D(0.989293, 0.273592, -0.136404, 0.0111663, -0.271918, 0.0693566, -0.0203041, -13.1972, -0.272062, -0.127655, 0.6008, 6.66394)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part4" type="MeshInstance3D" parent="Art/easel7"]
+transform = Transform3D(1.54039, -11.8591, -0.0385651, 0.0432272, 2.40163, 0.019609, -0.0965537, -9.74131, 0.96228, 6.97208, 0.762238, 4.9964)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel8" type="Node3D" parent="Art"]
+transform = Transform3D(-0.117691, -0.87013, -0.122815, -0.0216251, 2.98498, -0.0604609, 0.0900326, -0.420467, -0.175066, -100.941, 417.949, 12.6139)
+
+[node name="easel part" type="MeshInstance3D" parent="Art/easel8"]
+transform = Transform3D(1, -7.45058e-08, 1.49012e-08, -1.16415e-10, 1, 0, 1.49012e-08, -9.53674e-07, 1, 0, 0, 6.10352e-05)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part2" type="MeshInstance3D" parent="Art/easel8"]
+transform = Transform3D(0.996724, 0.279686, -0.0736297, 0.00166599, 0.85779, 0.0374381, 0.0825259, -7.04446, 0.854513, -0.543549, 0.310074, 15.1786)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part3" type="MeshInstance3D" parent="Art/easel8"]
+transform = Transform3D(0.88763, 0.125836, -0.038565, 0.00038373, 1.67135, 0.019609, 0.0384001, -6.40281, 0.96228, 0.599823, 1.10425, 3.39874)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part5" type="MeshInstance3D" parent="Art/easel8"]
+transform = Transform3D(0.989293, 0.273592, -0.136404, 0.0111663, -0.271918, 0.0693566, -0.0203041, -13.1972, -0.272062, -0.127655, 0.6008, 6.66394)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part4" type="MeshInstance3D" parent="Art/easel8"]
+transform = Transform3D(1.54039, -11.8591, -0.0385651, 0.0432272, 2.40163, 0.019609, -0.0965537, -9.74131, 0.96228, 6.97208, 0.762238, 4.9964)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel6" type="Node3D" parent="Art"]
+transform = Transform3D(-0.0808487, 0.485239, 0.183875, -0.0216251, 2.98498, -0.0604609, -0.124179, -0.83574, -0.109186, -80.1412, 420.95, -53.8561)
+
+[node name="easel part" type="MeshInstance3D" parent="Art/easel6"]
+transform = Transform3D(1, -7.45058e-08, 1.49012e-08, -1.16415e-10, 1, 0, 1.49012e-08, -9.53674e-07, 1, 0, 0, 6.10352e-05)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part2" type="MeshInstance3D" parent="Art/easel6"]
+transform = Transform3D(0.996724, 0.279686, -0.0736297, 0.00166599, 0.85779, 0.0374381, 0.0825259, -7.04446, 0.854513, -0.543549, 0.310074, 15.1786)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part3" type="MeshInstance3D" parent="Art/easel6"]
+transform = Transform3D(0.88763, 0.125836, -0.038565, 0.00038373, 1.67135, 0.019609, 0.0384001, -6.40281, 0.96228, 0.599823, 1.10425, 3.39874)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part5" type="MeshInstance3D" parent="Art/easel6"]
+transform = Transform3D(0.989293, 0.273592, -0.136404, 0.0111663, -0.271918, 0.0693566, -0.0203041, -13.1972, -0.272062, -0.127655, 0.6008, 6.66394)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part4" type="MeshInstance3D" parent="Art/easel6"]
+transform = Transform3D(1.54039, -11.8591, -0.0385651, 0.0432272, 2.40163, 0.019609, -0.0965537, -9.74131, 0.96228, 6.97208, 0.762238, 4.9964)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel10" type="Node3D" parent="Art"]
+transform = Transform3D(-0.147747, -0.368578, 0.0250908, -0.0216251, 2.98498, -0.0604609, -0.0112991, -0.893347, -0.212372, 75.5262, 420.95, -22.0487)
+
+[node name="easel part" type="MeshInstance3D" parent="Art/easel10"]
+transform = Transform3D(1, -7.45058e-08, 1.49012e-08, -1.16415e-10, 1, 0, 1.49012e-08, -9.53674e-07, 1, 0, 0, 6.10352e-05)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part2" type="MeshInstance3D" parent="Art/easel10"]
+transform = Transform3D(0.996724, 0.279686, -0.0736297, 0.00166599, 0.85779, 0.0374381, 0.0825259, -7.04446, 0.854513, -0.543549, 0.310074, 15.1786)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part3" type="MeshInstance3D" parent="Art/easel10"]
+transform = Transform3D(0.88763, 0.125836, -0.038565, 0.00038373, 1.67135, 0.019609, 0.0384001, -6.40281, 0.96228, 0.599823, 1.10425, 3.39874)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part5" type="MeshInstance3D" parent="Art/easel10"]
+transform = Transform3D(0.989293, 0.273592, -0.136404, 0.0111663, -0.271918, 0.0693566, -0.0203041, -13.1972, -0.272062, -0.127655, 0.6008, 6.66394)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part4" type="MeshInstance3D" parent="Art/easel10"]
+transform = Transform3D(1.54039, -11.8591, -0.0385651, 0.0432272, 2.40163, 0.019609, -0.0965537, -9.74131, 0.96228, 6.97208, 0.762238, 4.9964)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel11" type="Node3D" parent="Art"]
+transform = Transform3D(-0.147747, -0.368578, 0.0250908, -0.0216251, 2.98498, -0.0604609, -0.0112991, -0.893347, -0.212372, 75.4803, 420.95, 3.59891)
+
+[node name="easel part" type="MeshInstance3D" parent="Art/easel11"]
+transform = Transform3D(1, -7.45058e-08, 1.49012e-08, -1.16415e-10, 1, 0, 1.49012e-08, -9.53674e-07, 1, 0, 0, 6.10352e-05)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part2" type="MeshInstance3D" parent="Art/easel11"]
+transform = Transform3D(0.996724, 0.279686, -0.0736297, 0.00166599, 0.85779, 0.0374381, 0.0825259, -7.04446, 0.854513, -0.543549, 0.310074, 15.1786)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part3" type="MeshInstance3D" parent="Art/easel11"]
+transform = Transform3D(0.88763, 0.125836, -0.038565, 0.00038373, 1.67135, 0.019609, 0.0384001, -6.40281, 0.96228, 0.599823, 1.10425, 3.39874)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part5" type="MeshInstance3D" parent="Art/easel11"]
+transform = Transform3D(0.989293, 0.273592, -0.136404, 0.0111663, -0.271918, 0.0693566, -0.0203041, -13.1972, -0.272062, -0.127655, 0.6008, 6.66394)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part4" type="MeshInstance3D" parent="Art/easel11"]
+transform = Transform3D(1.54039, -11.8591, -0.0385651, 0.0432272, 2.40163, 0.019609, -0.0965537, -9.74131, 0.96228, 6.97208, 0.762238, 4.9964)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel12" type="Node3D" parent="Art"]
+transform = Transform3D(-0.136985, -0.731634, -0.0733126, -0.0216251, 2.98498, -0.0604609, 0.0564995, -0.631371, -0.20089, 98.4353, 420.177, -15.3505)
+
+[node name="easel part" type="MeshInstance3D" parent="Art/easel12"]
+transform = Transform3D(1, -7.45058e-08, 1.49012e-08, -1.16415e-10, 1, 0, 1.49012e-08, -9.53674e-07, 1, 0, 0, 6.10352e-05)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part2" type="MeshInstance3D" parent="Art/easel12"]
+transform = Transform3D(0.996724, 0.279686, -0.0736297, 0.00166599, 0.85779, 0.0374381, 0.0825259, -7.04446, 0.854513, -0.543549, 0.310074, 15.1786)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part3" type="MeshInstance3D" parent="Art/easel12"]
+transform = Transform3D(0.88763, 0.125836, -0.038565, 0.00038373, 1.67135, 0.019609, 0.0384001, -6.40281, 0.96228, 0.599823, 1.10425, 3.39874)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part5" type="MeshInstance3D" parent="Art/easel12"]
+transform = Transform3D(0.989293, 0.273592, -0.136404, 0.0111663, -0.271918, 0.0693566, -0.0203041, -13.1972, -0.272062, -0.127655, 0.6008, 6.66394)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part4" type="MeshInstance3D" parent="Art/easel12"]
+transform = Transform3D(1.54039, -11.8591, -0.0385651, 0.0432272, 2.40163, 0.019609, -0.0965537, -9.74131, 0.96228, 6.97208, 0.762238, 4.9964)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel13" type="Node3D" parent="Art"]
+transform = Transform3D(-0.147747, -0.368578, 0.0250908, -0.0216251, 2.98498, -0.0604609, -0.0112991, -0.893347, -0.212372, 99.295, 419.279, -2.28788)
+
+[node name="easel part" type="MeshInstance3D" parent="Art/easel13"]
+transform = Transform3D(1, -7.45058e-08, 1.49012e-08, -1.16415e-10, 1, 0, 1.49012e-08, -9.53674e-07, 1, 0, 0, 6.10352e-05)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part2" type="MeshInstance3D" parent="Art/easel13"]
+transform = Transform3D(0.996724, 0.279686, -0.0736297, 0.00166599, 0.85779, 0.0374381, 0.0825259, -7.04446, 0.854513, -0.543549, 0.310074, 15.1786)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part3" type="MeshInstance3D" parent="Art/easel13"]
+transform = Transform3D(0.88763, 0.125836, -0.038565, 0.00038373, 1.67135, 0.019609, 0.0384001, -6.40281, 0.96228, 0.599823, 1.10425, 3.39874)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part5" type="MeshInstance3D" parent="Art/easel13"]
+transform = Transform3D(0.989293, 0.273592, -0.136404, 0.0111663, -0.271918, 0.0693566, -0.0203041, -13.1972, -0.272062, -0.127655, 0.6008, 6.66394)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part4" type="MeshInstance3D" parent="Art/easel13"]
+transform = Transform3D(1.54039, -11.8591, -0.0385651, 0.0432272, 2.40163, 0.019609, -0.0965537, -9.74131, 0.96228, 6.97208, 0.762238, 4.9964)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel14" type="Node3D" parent="Art"]
+transform = Transform3D(0.13121, 0.786581, 0.0914712, -0.0216251, 2.98498, -0.0604609, -0.068854, 0.561434, 0.193299, 104.652, 419.771, -37.034)
+
+[node name="easel part" type="MeshInstance3D" parent="Art/easel14"]
+transform = Transform3D(1, -7.45058e-08, 1.49012e-08, -1.16415e-10, 1, 0, 1.49012e-08, -9.53674e-07, 1, 0, 0, 6.10352e-05)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part2" type="MeshInstance3D" parent="Art/easel14"]
+transform = Transform3D(0.996724, 0.279686, -0.0736297, 0.00166599, 0.85779, 0.0374381, 0.0825259, -7.04446, 0.854513, -0.543549, 0.310074, 15.1786)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part3" type="MeshInstance3D" parent="Art/easel14"]
+transform = Transform3D(0.88763, 0.125836, -0.038565, 0.00038373, 1.67135, 0.019609, 0.0384001, -6.40281, 0.96228, 0.599823, 1.10425, 3.39874)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part5" type="MeshInstance3D" parent="Art/easel14"]
+transform = Transform3D(0.989293, 0.273592, -0.136404, 0.0111663, -0.271918, 0.0693566, -0.0203041, -13.1972, -0.272062, -0.127655, 0.6008, 6.66394)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part4" type="MeshInstance3D" parent="Art/easel14"]
+transform = Transform3D(1.54039, -11.8591, -0.0385651, 0.0432272, 2.40163, 0.019609, -0.0965537, -9.74131, 0.96228, 6.97208, 0.762238, 4.9964)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel" type="Node3D" parent="Art"]
+transform = Transform3D(0.0932379, -0.196773, -0.0969102, -0.02014, 1.71916, -0.0358395, 0.101741, 0.520638, 0.0817159, 36.193, 411.859, 21.0452)
+
+[node name="easel part" type="MeshInstance3D" parent="Art/easel"]
+transform = Transform3D(1, -7.45058e-08, 1.49012e-08, -1.16415e-10, 1, 0, 1.49012e-08, -9.53674e-07, 1, 0, 0, 6.10352e-05)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part2" type="MeshInstance3D" parent="Art/easel"]
+transform = Transform3D(0.996724, 0.279686, -0.0736297, 0.00166599, 0.85779, 0.0374381, 0.0825259, -7.04446, 0.854513, -0.543549, 0.310074, 15.1786)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part3" type="MeshInstance3D" parent="Art/easel"]
+transform = Transform3D(0.88763, 0.125836, -0.038565, 0.00038373, 1.67135, 0.019609, 0.0384001, -6.40281, 0.96228, 0.599823, 1.10425, 3.39874)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part5" type="MeshInstance3D" parent="Art/easel"]
+transform = Transform3D(0.989293, 0.273592, -0.136404, 0.0111663, -0.271918, 0.0693566, -0.0203041, -13.1972, -0.272062, -0.127655, 0.6008, 6.66394)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="easel part4" type="MeshInstance3D" parent="Art/easel"]
+transform = Transform3D(1.54039, -11.8591, -0.0385651, 0.0432272, 2.40163, 0.019609, -0.0965537, -9.74131, 0.96228, 6.97208, 0.762238, 4.9964)
+mesh = SubResource("BoxMesh_m0xki")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Art"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 7.81543, 422.452, 74.7603)
+texture = ExtResource("10_ax7ne")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Art/Sprite3D"]
+transform = Transform3D(-1.11971, 0, -0.439384, 0, 2.38921, 0, 10.2687, 0, -0.0479109, -10.0477, -5.15533, -7.4837)
+mesh = SubResource("BoxMesh_xe3hh")
+
+[node name="Label3D" type="Label3D" parent="Art/Sprite3D/MeshInstance3D"]
+transform = Transform3D(-0.0968096, 0, 8.94258e-08, 0, 0.418547, 0, -1.87195e-08, 0, -2.2625, -0.0295966, 0.00357056, -0.637344)
+text = "Flowers For the Grave by Dhivya Ravi
+In this painting, a tree resembles a human to signify rebirth into nature after death, strengthening the bond of human and nature as kin. I emphasize light as hope, a symbol to guide one through the hardships of life after experiencing a loss of a loved one.
+"
+font = ExtResource("11_sv41r")
+font_size = 96
+autowrap_mode = 3
+width = 2000.0
+
+[node name="Cherise" type="Sprite3D" parent="Art"]
+transform = Transform3D(0.114413, 0, 0.690587, 0, 0.7, 0, -0.690587, 0, 0.114413, 57.6176, 416.493, 14.1875)
+texture = ExtResource("12_sv41r")
+
+[node name="Label3D" type="Label3D" parent="Art/Cherise"]
+transform = Transform3D(-0.988289, 0, -0.152588, 0, 1, 0, 0.152589, 0, -0.988289, -12.0925, -5.07611, -0.548485)
+text = "By Cherise Vileta
+@sparkykinetic
+https://sparkykinetic.itch.io/
+"
+font = ExtResource("11_sv41r")
+font_size = 96
+autowrap_mode = 3
+width = 2000.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Art/Cherise"]
+transform = Transform3D(4.60943, 0, 0.0678494, 0, 2.38922, 0, -0.711683, 0, 0.439447, -11.7473, -5.08466, -0.316734)
+mesh = SubResource("BoxMesh_xe3hh")
+
+[node name="Label3D2" type="Label3D" parent="Art/Cherise"]
+transform = Transform3D(-0.988289, 0, -0.152588, 0, 1, 0, 0.152589, 0, -0.988289, -12.0925, -5.07611, -0.548485)
+text = "By Cherise Vileta
+@sparkykinetic
+https://sparkykinetic.itch.io/
+"
+font = ExtResource("11_sv41r")
+font_size = 96
+autowrap_mode = 3
+width = 2000.0
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Art/Cherise"]
+transform = Transform3D(4.60943, 0, 0.0678494, 0, 2.38922, 0, -0.711683, 0, 0.439447, -11.7473, -5.08466, -0.316734)
+mesh = SubResource("BoxMesh_xe3hh")
+
+[node name="Preston" type="Sprite3D" parent="Art"]
+transform = Transform3D(0.305951, 0, 0.257671, 0, 0.4, 0, -0.257671, 0, 0.305951, 35.0557, 416.173, 21.5068)
+texture = ExtResource("14_opqd1")
+
+[node name="Label3D" type="Label3D" parent="Art/Preston"]
+transform = Transform3D(-0.945245, 0, 0.326361, 0, 1, 0, -0.32636, 0, -0.945245, -11.658, -6.35205, -0.706131)
+text = "Sunflowers by Preston Vaugn
+
+"
+font = ExtResource("11_sv41r")
+font_size = 96
+autowrap_mode = 3
+width = 2000.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Art/Preston"]
+transform = Transform3D(4.40867, 0, -0.145117, 0, 2.38922, 0, 1.52216, 0, 0.420307, -11.8214, -6.3606, -0.249573)
+mesh = SubResource("BoxMesh_xe3hh")
+
+[node name="Timothy" type="Sprite3D" parent="Art"]
+transform = Transform3D(-0.249648, 0, 0.653969, 0, 0.7, 0, -0.653969, 0, -0.249648, 58.7338, 417.519, -35.2089)
+texture = ExtResource("15_xyj84")
+
+[node name="Label3D" type="Label3D" parent="Art/Timothy"]
+transform = Transform3D(-0.891506, 0, 0.453011, 0, 1, 0, -0.45301, 0, -0.891505, -12.872, -6.49542, -7.87781)
+text = "Valley of Garden Spirits by Timothy McKague
+IG: @timothymcpics76
+https://www.deviantart.com/fairyknight282/gallery
+
+ This scene is from Timothy's original story, Floria's Blessings
+
+
+
+"
+font = ExtResource("11_sv41r")
+font_size = 96
+autowrap_mode = 3
+width = 2000.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Art/Timothy"]
+transform = Transform3D(7.86248, 0, -0.182435, 0, 3.77541, 0, 3.99525, 0, 0.359024, -13.0283, -6.50391, -7.60318)
+mesh = SubResource("BoxMesh_xe3hh")
+
+[node name="Zionna" type="Sprite3D" parent="Art"]
+transform = Transform3D(0.397885, 0, 0.0410754, 0, 0.4, 0, -0.0410754, 0, 0.397885, -72.5484, 425.491, 34.0804)
+texture = ExtResource("16_witbp")
+
+[node name="Label3D" type="Label3D" parent="Art/Zionna"]
+transform = Transform3D(-0.891505, 0, 0.453011, 0, 1, 0, -0.45301, 0, -0.891505, -13.7457, -6.49548, -5.51585)
+text = "By Zionna Brown
+
+https://meldidntlisten.itch.io/
+https://meldidntlisten.com/ 
+
+
+
+
+"
+font = ExtResource("11_sv41r")
+font_size = 96
+autowrap_mode = 3
+width = 2000.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Art/Zionna"]
+transform = Transform3D(7.86248, 0, -0.182435, 0, 3.77541, 0, 3.99525, 0, 0.359024, -13.9021, -6.50391, -5.24122)
+mesh = SubResource("BoxMesh_xe3hh")
+
+[node name="Cheesedcake" type="Sprite3D" parent="Art"]
+transform = Transform3D(-0.0750897, 0, -0.392889, 0, 0.4, 0, 0.392889, 0, -0.0750897, -81.9852, 425.065, -9.52729)
+flip_h = true
+texture = ExtResource("17_kflc5")
+
+[node name="Label3D" type="Label3D" parent="Art/Cheesedcake"]
+transform = Transform3D(-0.95238, 0, -0.304913, 0, 1, 0, 0.304914, 0, -0.95238, 15.2639, -7.57825, -0.815216)
+text = "together we bloom. by Cheesedcake
+
+https://cheesedcake.itch.io/
+
+
+
+
+
+"
+font = ExtResource("11_sv41r")
+font_size = 132
+autowrap_mode = 3
+width = 2000.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Art/Cheesedcake"]
+transform = Transform3D(8.39935, 0, 0.122794, 0, 3.77541, 0, -2.68914, 0, 0.383539, 15.3459, -6.50391, -0.51001)
+mesh = SubResource("BoxMesh_xe3hh")
+
+[node name="DOPPLE" type="Sprite3D" parent="Art"]
+transform = Transform3D(-0.43351, 0, -0.209237, 0, 0.50865, 0, 0.266072, 0, -0.34091, -78.7035, 425.065, -54.6256)
+flip_h = true
+texture = ExtResource("18_itu0t")
+
+[node name="Label3D" type="Label3D" parent="Art/DOPPLE"]
+transform = Transform3D(-0.95238, 0, -0.304913, 0, 1, 0, 0.304914, 0, -0.95238, 15.2639, -7.57825, -0.815216)
+text = "Clarity by dopple:3
+
+https://dopple3.itch.io/
+
+
+
+
+
+
+"
+font = ExtResource("11_sv41r")
+font_size = 132
+autowrap_mode = 3
+width = 2000.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Art/DOPPLE"]
+transform = Transform3D(8.39935, 0, 0.122794, 0, 3.77541, 0, -2.68914, 0, 0.383539, 15.3459, -6.50391, -0.51001)
+mesh = SubResource("BoxMesh_xe3hh")
+
+[node name="VELA" type="Sprite3D" parent="Art"]
+transform = Transform3D(-0.0656792, 0, -0.396651, 0, 0.50865, 0, 0.504392, 0, -0.0516498, -103.704, 424.204, -23.4121)
+flip_h = true
+texture = ExtResource("19_4no8g")
+
+[node name="Label3D" type="Label3D" parent="Art/VELA"]
+transform = Transform3D(-0.95238, 0, -0.304913, 0, 1, 0, 0.304914, 0, -0.95238, 15.2639, -8.30859, -0.815216)
+text = "Beautiful as a Grub by Vela8438
+
+https://vela8438.itch.io/
+
+
+
+
+
+
+
+"
+font = ExtResource("11_sv41r")
+font_size = 132
+autowrap_mode = 3
+width = 2000.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Art/VELA"]
+transform = Transform3D(8.39935, 0, 0.122794, 0, 3.77541, 0, -2.68914, 0, 0.383539, 15.3459, -6.50391, -0.51001)
+mesh = SubResource("BoxMesh_xe3hh")
+
+[node name="RiverCAT" type="Sprite3D" parent="Art"]
+transform = Transform3D(0.471086, 0, -0.508381, 0, 0.8, 0, 0.646589, 0, 0.370392, -101.279, 424.204, 11.866)
+flip_h = true
+texture = ExtResource("20_kja0s")
+
+[node name="Label3D" type="Label3D" parent="Art/RiverCAT"]
+transform = Transform3D(-0.95238, 0, -0.304913, 0, 1, 0, 0.304914, 0, -0.95238, 15.2639, -8.30859, -0.815216)
+text = "Utopian Sanctuary by Riv3r_C4T
+
+https://riv3r-c4t.itch.io/
+
+
+
+
+
+
+"
+font = ExtResource("11_sv41r")
+font_size = 132
+autowrap_mode = 3
+width = 2000.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Art/RiverCAT"]
+transform = Transform3D(8.39935, 0, 0.122794, 0, 3.77541, 0, -2.68914, 0, 0.383539, 15.3459, -6.50391, -0.51001)
+mesh = SubResource("BoxMesh_xe3hh")
+
+[node name="MAKO" type="Sprite3D" parent="Art"]
+transform = Transform3D(-0.0982854, 0, -0.793939, 0, 0.8, 0, 0.793939, 0, -0.0982854, -21.4896, 418.479, -41.7496)
+flip_h = true
+texture = ExtResource("21_48r4s")
+
+[node name="Label3D" type="Label3D" parent="Art/MAKO"]
+transform = Transform3D(-0.95238, 0, -0.304913, 0, 1, 0, 0.304914, 0, -0.95238, 15.2639, -8.30859, -0.815216)
+text = "Sleeping Giant by Mako Creates
+
+https://mako-creates.itch.io/ 
+
+
+
+
+
+
+"
+font = ExtResource("11_sv41r")
+font_size = 132
+autowrap_mode = 3
+width = 2000.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Art/MAKO"]
+transform = Transform3D(8.39935, 0, 0.122794, 0, 3.77541, 0, -2.68914, 0, 0.383539, 15.3459, -6.50391, -0.51001)
+mesh = SubResource("BoxMesh_xe3hh")
+
+[node name="WCC1" type="Sprite3D" parent="Art"]
+transform = Transform3D(-0.354031, 0, 0.717399, 0, 0.8, 0, -0.717399, 0, -0.354031, 105.229, 426.257, -35.1897)
+flip_h = true
+texture = ExtResource("22_p3doa")
+
+[node name="Label3D" type="Label3D" parent="Art/WCC1"]
+transform = Transform3D(0.413025, 0, 0.910719, 0, 1, 0, -0.91072, 0, 0.413026, -2.1, -8.30859, -19.3788)
+text = "CSUMB Wildlife Conservation Club
+
+
+
+
+
+
+"
+font = ExtResource("11_sv41r")
+font_size = 156
+autowrap_mode = 3
+width = 2000.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Art/WCC1"]
+transform = Transform3D(-3.6426, 0, -0.366762, 0, 3.77541, 0, 8.03194, 0, -0.166332, -2.38133, -6.50391, -19.5228)
+mesh = SubResource("BoxMesh_xe3hh")
+
+[node name="Label3D2" type="Label3D" parent="Art/WCC1"]
+transform = Transform3D(-0.413025, 0, -0.910719, 0, 1, 0, 0.91072, 0, -0.413026, -40.4141, -8.30859, -37.5121)
+text = "CSUMB Wildlife Conservation Club
+
+
+
+
+
+
+"
+font = ExtResource("11_sv41r")
+font_size = 156
+autowrap_mode = 3
+width = 2000.0
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Art/WCC1"]
+transform = Transform3D(3.6426, 0, 0.366762, 0, 3.77541, 0, -8.03194, 0, 0.166332, -40.1327, -6.50391, -37.3682)
+mesh = SubResource("BoxMesh_xe3hh")
+
+[node name="Label3D3" type="Label3D" parent="Art/WCC1"]
+transform = Transform3D(0.738177, 0, 0.167948, 0, 0.59086, 0, -0.0724443, 0, 1.71134, 133.937, -13.9879, -138.972)
+modulate = Color(0, 0, 0, 1)
+text = "Dear Player,
+You've come a long way, haven't you?  Whenever you feel stuck, look back on everything you've overcome and everyone who was there to help you.
+
+Since you've made it this far, let me tell you how to beat this game. Dispense free blessings and extra slack like a rich saint high on natural endorphins.
+Wield compassion like a performance artist who exalts in carving up pessimism and cynicism. 
+
+I invite you to act like a person who is in love. Even if you are not currently in the throes of passion for somebody special, simulate that state as best you can. Understand that love is the animating force of this universe. Make soup for others and never stop inviting others over for soup. 
+
+Be somebody's reason for living.  Thank you so much for playing!
+
+
+
+
+
+
+"
+font = ExtResource("11_sv41r")
+font_size = 196
+autowrap_mode = 3
+width = 3700.0
+
+[node name="WCC2" type="Sprite3D" parent="Art"]
+transform = Transform3D(-0.0215, 0, -0.799711, 0, 0.8, 0, 0.799711, 0, -0.0215, 99.54, 425.339, -4.14304)
+flip_h = true
+texture = ExtResource("23_2sboe")
+
+[node name="WCC3" type="Sprite3D" parent="Art"]
+transform = Transform3D(-0.0259175, 0, -0.399159, 0, 0.4, 0, 0.399159, 0, -0.0259175, 76.3046, 426.066, 2.17614)
+flip_h = true
+texture = ExtResource("24_baq46")
+
+[node name="WCC4" type="Sprite3D" parent="Art"]
+transform = Transform3D(-0.0457689, 0, -0.804385, 0, 0.503123, 0, 0.704894, 0, -0.0522289, 77.6749, 423.886, -22.643)
+flip_h = true
+texture = ExtResource("25_nbaxu")
+
+[node name="WCC5" type="Sprite3D" parent="Art"]
+transform = Transform3D(0.288297, 0, -0.746247, 0, 0.8, 0, 0.746247, 0, 0.288297, 98.2215, 426.988, -17.0526)
+flip_h = true
+texture = ExtResource("26_nu2gi")
+
+[node name="sIGN" type="Node3D" parent="."]
+transform = Transform3D(0.459613, 0, 0, 0, 3.73655, 0, 0, 0, 5.844, 8.8547, 415.754, -10.2481)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sIGN"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_opqd1")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="sIGN"]
+transform = Transform3D(0.682003, 0, 0, 0, 1, 0, 0, 0, 0.105213, -0.258722, -0.321625, 0.431072)
+mesh = SubResource("BoxMesh_opqd1")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="sIGN"]
+transform = Transform3D(0.682003, 0, 0, 0, 1, 0, 0, 0, 0.105213, -0.258722, -0.321625, -0.397291)
+mesh = SubResource("BoxMesh_opqd1")
+skeleton = NodePath("../..")
+
+[node name="sIGN2" type="Node3D" parent="."]
+transform = Transform3D(0.324995, 0, 4.13233, 0, 3.73655, 0, -0.324995, 0, 4.13233, 1.44857, 414.846, -2.23715)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sIGN2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_opqd1")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="sIGN2"]
+transform = Transform3D(0.682003, 0, 0, 0, 1, 0, 0, 0, 0.105213, -0.258722, -0.321625, 0.431072)
+mesh = SubResource("BoxMesh_opqd1")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="sIGN2"]
+transform = Transform3D(0.682003, 0, 0, 0, 1, 0, 0, 0, 0.105213, -0.258722, -0.321625, -0.397291)
+mesh = SubResource("BoxMesh_opqd1")
+skeleton = NodePath("../..")
+
+[node name="sIGN3" type="Node3D" parent="."]
+transform = Transform3D(0.324995, 0, -4.13233, 0, 3.73655, 0, 0.324995, 0, 4.13233, -0.706821, 414.846, -17.7658)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sIGN3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_opqd1")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="sIGN3"]
+transform = Transform3D(0.682003, 0, 0, 0, 1, 0, 0, 0, 0.105213, -0.258722, -0.321625, 0.431072)
+mesh = SubResource("BoxMesh_opqd1")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="sIGN3"]
+transform = Transform3D(0.682003, 0, 0, 0, 1, 0, 0, 0, 0.105213, -0.258722, -0.321625, -0.397291)
+mesh = SubResource("BoxMesh_opqd1")
+skeleton = NodePath("../..")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -0.484959, 415.052, -17.5769)
+text = "Under The Soil is CSUMB Game Dev Club's Fall 2025 art jam.
+
+This art gallery is the product of collaboration between over a dozen artists
+inspired by themes of growth, community, and imagination.
+
+Beneath the soil lies the potential for growth, connection, and
+imaging better worlds. 
+
+Like roots deep inq the soil or networks of mycelium underground, we are
+ quietly connected, nourishing and supporting one another
+ in ways both seen and unseen
+
+"
+font_size = 48
+
+[node name="Label3D2" type="Label3D" parent="."]
+transform = Transform3D(-0.956052, 0, 0.707124, 0, 1.35206, 0, -0.956051, 0, -0.707124, 1.62593, 414.743, -2.51854)
+text = "This event was organized by CSUMB Game Dev Club.
+
+Environment modeling by Zionna Brown
+
+Game programming and production by Kyle Lynn
+
+Thank you to everyone who participated and please
+ enjoy the show! 
+"
+font_size = 54
+
+[node name="Kill Plane" parent="." instance=ExtResource("27_kflc5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.126, 368.97, 47.2748)
+visible = false
+script = null
+
+[editable path="Area3D/Island Export"]

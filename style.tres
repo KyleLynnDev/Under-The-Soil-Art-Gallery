@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=8 format=3 uid="uid://f82mhx6ivs4x"]
+
+[ext_resource type="Script" uid="uid://bil54ton0w5hm" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_74nf7"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="2_rkoon"]
+[ext_resource type="PackedScene" uid="uid://d2it0xiap3gnt" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Textbubble/text_bubble_layer.tscn" id="3_ita2f"]
+[ext_resource type="Script" uid="uid://c0g432ere2pmq" path="res://addons/dialogic/Resources/dialogic_style.gd" id="4_a4i7v"]
+
+[sub_resource type="Resource" id="Resource_i734w"]
+script = ExtResource("1_74nf7")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_ktor4"]
+script = ExtResource("1_74nf7")
+scene = ExtResource("2_rkoon")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_wyboe"]
+script = ExtResource("1_74nf7")
+scene = ExtResource("3_ita2f")
+overrides = {
+"normal_font": "\"res://assets/fonts/Beanstalk.ttf\""
+}
+
+[resource]
+script = ExtResource("4_a4i7v")
+name = "style"
+layer_list = Array[String](["10", "11"])
+layer_info = {
+"": SubResource("Resource_i734w"),
+"10": SubResource("Resource_ktor4"),
+"11": SubResource("Resource_wyboe")
+}
+base_overrides = {}
+layers = Array[ExtResource("1_74nf7")]([])
+metadata/_latest_layer = ""

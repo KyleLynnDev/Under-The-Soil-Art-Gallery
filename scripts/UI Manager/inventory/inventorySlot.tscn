@@ -1,0 +1,165 @@
+[gd_scene load_steps=5 format=3 uid="uid://h1pxs6441q6v"]
+
+[ext_resource type="Script" uid="uid://chae8y5y6666l" path="res://Utilities/UI Manager/inventory/inventory_slot.gd" id="1_y2dfm"]
+[ext_resource type="Texture2D" uid="uid://ykcyo7t3u601" path="res://abble.png" id="2_y2dfm"]
+[ext_resource type="FontFile" uid="uid://w7ug00wj32iw" path="res://Assets/Fonts/default_font.ttf" id="3_3btqs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7yq8k"]
+
+[node name="InventorySlot" type="Control"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 32.0
+offset_bottom = 32.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 2
+mouse_filter = 1
+script = ExtResource("1_y2dfm")
+
+[node name="innerRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.607843, 0.541176, 0, 0.266667)
+
+[node name="itemIcon" type="Sprite2D" parent="innerRect"]
+texture_filter = 1
+position = Vector2(16, 16)
+texture = ExtResource("2_y2dfm")
+
+[node name="itemQuantity" type="Label" parent="innerRect"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("3_3btqs")
+theme_override_font_sizes/font_size = 16
+text = "1"
+
+[node name="itemButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7yq8k")
+
+[node name="detailsPanel" type="ColorRect" parent="."]
+visible = false
+top_level = true
+z_index = 10
+layout_mode = 0
+offset_left = 60.0
+offset_top = 34.0
+offset_right = 300.0
+offset_bottom = 164.0
+color = Color(0.596078, 0.933333, 0.8, 1)
+
+[node name="itemName" type="Label" parent="detailsPanel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 45.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("3_3btqs")
+theme_override_font_sizes/font_size = 32
+text = "Name:"
+
+[node name="itemType" type="Label" parent="detailsPanel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 5.0
+offset_top = -18.0
+offset_right = 59.0
+offset_bottom = 6.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.0745098, 0.0745098, 0.0745098, 0.784314)
+theme_override_fonts/font = ExtResource("3_3btqs")
+theme_override_font_sizes/font_size = 32
+text = "Type:"
+
+[node name="itemEffect" type="Label" parent="detailsPanel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -37.0
+offset_right = 84.0
+offset_bottom = -13.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.0745098, 0.0745098, 0.0745098, 0.588235)
+theme_override_fonts/font = ExtResource("3_3btqs")
+theme_override_font_sizes/font_size = 32
+text = "Effect:"
+
+[node name="UsagePanel" type="ColorRect" parent="."]
+visible = false
+top_level = true
+z_index = 10
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.009375
+anchor_top = 0.2
+anchor_right = -0.009375
+anchor_bottom = 0.2
+offset_left = 69.0
+offset_top = -36.0
+offset_right = 299.0
+offset_bottom = 79.0
+color = Color(0.596078, 0.933333, 0.8, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="useButton" type="Button" parent="UsagePanel"]
+texture_filter = 1
+custom_minimum_size = Vector2(230, 43)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -115.0
+offset_top = 10.0
+offset_right = 115.0
+offset_bottom = 53.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_3btqs")
+theme_override_font_sizes/font_size = 32
+text = "USE"
+
+[node name="dropButton" type="Button" parent="UsagePanel"]
+texture_filter = 1
+custom_minimum_size = Vector2(230, 43)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -115.0
+offset_top = -53.0
+offset_right = 115.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_3btqs")
+theme_override_font_sizes/font_size = 32
+text = "DROP
+"
+
+[connection signal="mouse_entered" from="itemButton" to="." method="_on_item_button_mouse_entered"]
+[connection signal="mouse_exited" from="itemButton" to="." method="_on_item_button_mouse_exited"]
+[connection signal="pressed" from="itemButton" to="." method="_on_item_button_pressed"]
+[connection signal="pressed" from="UsagePanel/useButton" to="." method="_on_use_button_pressed"]
+[connection signal="pressed" from="UsagePanel/dropButton" to="." method="_on_drop_button_pressed"]

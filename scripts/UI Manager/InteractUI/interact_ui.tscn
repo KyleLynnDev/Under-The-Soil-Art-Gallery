@@ -1,0 +1,186 @@
+[gd_scene load_steps=2 format=3 uid="uid://evr7hclvubgw"]
+
+[ext_resource type="FontFile" uid="uid://b01kfm1sg1ek7" path="res://Assets/Fonts/dogicabold.ttf" id="1_dme4n"]
+
+[node name="InteractUI" type="Control"]
+z_index = 100
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ItemPickup" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(120, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -154.0
+offset_right = 40.0
+offset_bottom = -129.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.705882, 0.54902, 0.317647, 1)
+
+[node name="Label" type="Label" parent="ItemPickup"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -4.5
+offset_bottom = 4.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_dme4n")
+theme_override_font_sizes/font_size = 16
+text = "PICK UP"
+horizontal_alignment = 1
+
+[node name="ObjectObserve" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(120, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -154.0
+offset_right = 40.0
+offset_bottom = -129.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.705882, 0.54902, 0.317647, 1)
+
+[node name="Label" type="Label" parent="ObjectObserve"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -7.5
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_dme4n")
+theme_override_font_sizes/font_size = 16
+text = "Observe
+"
+horizontal_alignment = 1
+
+[node name="NPCTALK" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(80, 25)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -154.0
+offset_right = 40.0
+offset_bottom = -129.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.705882, 0.54902, 0.317647, 1)
+
+[node name="Label" type="Label" parent="NPCTALK"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -4.5
+offset_bottom = 4.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_dme4n")
+theme_override_font_sizes/font_size = 16
+text = "Talk"
+horizontal_alignment = 1
+
+[node name="SkillInteract" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(135, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -154.0
+offset_right = 40.0
+offset_bottom = -129.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.705882, 0.54902, 0.317647, 1)
+
+[node name="Label" type="Label" parent="SkillInteract"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -4.5
+offset_bottom = 4.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_dme4n")
+theme_override_font_sizes/font_size = 16
+text = "Interact"
+horizontal_alignment = 1
+
+[node name="DoorUse" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(135, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -154.0
+offset_right = 40.0
+offset_bottom = -129.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.705882, 0.54902, 0.317647, 1)
+
+[node name="Label" type="Label" parent="DoorUse"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -4.5
+offset_bottom = 4.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_dme4n")
+theme_override_font_sizes/font_size = 16
+text = "USE DOOR"
+horizontal_alignment = 1

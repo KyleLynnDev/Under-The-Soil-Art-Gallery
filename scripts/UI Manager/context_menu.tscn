@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://v7h0skj7vluq"]
+
+[ext_resource type="FontFile" uid="uid://w7ug00wj32iw" path="res://Assets/Fonts/default_font.ttf" id="1_1scb1"]
+[ext_resource type="FontFile" uid="uid://b01kfm1sg1ek7" path="res://Assets/Fonts/dogicabold.ttf" id="2_7tkac"]
+
+[node name="Context Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 241.0
+offset_bottom = 156.0
+color = Color(0.596078, 0.933333, 0.8, 1)
+
+[node name="Examine" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -21.0
+offset_right = -9.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_1scb1")
+text = "Examine"
+
+[node name="Interact" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = 31.0
+offset_right = -9.0
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_1scb1")
+text = "Interact"
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 246.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_7tkac")
+text = "Actions:"

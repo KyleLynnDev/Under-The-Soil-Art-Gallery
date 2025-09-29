@@ -1,0 +1,214 @@
+[gd_scene load_steps=7 format=3 uid="uid://duyc66grxg4ii"]
+
+[ext_resource type="Script" uid="uid://dyr6uoke1y6dw" path="res://Utilities/UI Manager/inventory/inventory.gd" id="1_8w6iv"]
+[ext_resource type="PackedScene" uid="uid://h1pxs6441q6v" path="res://Utilities/UI Manager/inventory/inventorySlot.tscn" id="2_2ux2p"]
+[ext_resource type="Texture2D" uid="uid://cy54mf7t82db1" path="res://Utilities/UI Manager/inventory/inventory backdrop.png" id="2_61s8h"]
+[ext_resource type="Texture2D" uid="uid://blkmiytcuer32" path="res://Entities/Items/Equipment/coins.png" id="4_xb7wd"]
+[ext_resource type="Texture2D" uid="uid://dphq8ygd0garr" path="res://Entities/Items/Equipment/Normal Key.png" id="5_b62m1"]
+[ext_resource type="Texture2D" uid="uid://c7sl76f4ukree" path="res://HEART pickup.png" id="6_xb7wd"]
+
+[node name="Inventory" type="Control"]
+process_mode = 3
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_8w6iv")
+
+[node name="Inv Backdrop" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_61s8h")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.257813
+anchor_top = 0.0958333
+anchor_right = 0.3125
+anchor_bottom = 0.0958333
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "inventory"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.43125
+anchor_top = 0.443056
+anchor_right = 0.485938
+anchor_bottom = 0.443056
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "HEART"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.432813
+anchor_top = 0.618056
+anchor_right = 0.4875
+anchor_bottom = 0.618056
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "KEYS"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.43125
+anchor_top = 0.765278
+anchor_right = 0.485938
+anchor_bottom = 0.765278
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "COINS"
+metadata/_edit_use_anchors_ = true
+
+[node name="Inventory backdrop" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 144.0
+offset_right = 263.0
+offset_bottom = 344.0
+mouse_filter = 2
+color = Color(0.211765, 0.313726, 0.227451, 0)
+
+[node name="GridContainer" type="GridContainer" parent="Inventory backdrop"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -76.0
+offset_right = 96.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+columns = 5
+
+[node name="InventorySlot" parent="Inventory backdrop/GridContainer" instance=ExtResource("2_2ux2p")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="Inventory backdrop/GridContainer" instance=ExtResource("2_2ux2p")]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="Inventory backdrop/GridContainer" instance=ExtResource("2_2ux2p")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="Inventory backdrop/GridContainer" instance=ExtResource("2_2ux2p")]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="Inventory backdrop/GridContainer" instance=ExtResource("2_2ux2p")]
+layout_mode = 2
+
+[node name="InventorySlot6" parent="Inventory backdrop/GridContainer" instance=ExtResource("2_2ux2p")]
+layout_mode = 2
+
+[node name="InventorySlot7" parent="Inventory backdrop/GridContainer" instance=ExtResource("2_2ux2p")]
+layout_mode = 2
+
+[node name="InventorySlot8" parent="Inventory backdrop/GridContainer" instance=ExtResource("2_2ux2p")]
+layout_mode = 2
+
+[node name="InventorySlot9" parent="Inventory backdrop/GridContainer" instance=ExtResource("2_2ux2p")]
+layout_mode = 2
+
+[node name="InventorySlot10" parent="Inventory backdrop/GridContainer" instance=ExtResource("2_2ux2p")]
+layout_mode = 2
+
+[node name="InventorySlot11" parent="Inventory backdrop/GridContainer" instance=ExtResource("2_2ux2p")]
+layout_mode = 2
+
+[node name="InventorySlot12" parent="Inventory backdrop/GridContainer" instance=ExtResource("2_2ux2p")]
+layout_mode = 2
+
+[node name="InventorySlot13" parent="Inventory backdrop/GridContainer" instance=ExtResource("2_2ux2p")]
+layout_mode = 2
+
+[node name="InventorySlot14" parent="Inventory backdrop/GridContainer" instance=ExtResource("2_2ux2p")]
+layout_mode = 2
+
+[node name="InventorySlot15" parent="Inventory backdrop/GridContainer" instance=ExtResource("2_2ux2p")]
+layout_mode = 2
+
+[node name="InventorySlot16" parent="Inventory backdrop/GridContainer" instance=ExtResource("2_2ux2p")]
+layout_mode = 2
+
+[node name="InventorySlot17" parent="Inventory backdrop/GridContainer" instance=ExtResource("2_2ux2p")]
+layout_mode = 2
+
+[node name="InventorySlot18" parent="Inventory backdrop/GridContainer" instance=ExtResource("2_2ux2p")]
+layout_mode = 2
+
+[node name="InventorySlot19" parent="Inventory backdrop/GridContainer" instance=ExtResource("2_2ux2p")]
+layout_mode = 2
+
+[node name="InventorySlot20" parent="Inventory backdrop/GridContainer" instance=ExtResource("2_2ux2p")]
+layout_mode = 2
+
+[node name="Coins" type="Sprite2D" parent="."]
+position = Vector2(269, 298)
+texture = ExtResource("4_xb7wd")
+
+[node name="CoinLabel" type="Label" parent="Coins"]
+offset_left = 18.0
+offset_top = -7.0
+offset_right = 58.0
+offset_bottom = 16.0
+text = "0"
+
+[node name="NormalKey" type="Sprite2D" parent="."]
+position = Vector2(268, 249)
+texture = ExtResource("5_b62m1")
+
+[node name="KeyLabel" type="Label" parent="NormalKey"]
+offset_left = 20.0
+offset_top = -8.0
+offset_right = 60.0
+offset_bottom = 15.0
+text = "0"
+
+[node name="HeartPickup" type="Sprite2D" parent="."]
+position = Vector2(267, 192)
+texture = ExtResource("6_xb7wd")
+
+[node name="HEARTLabel" type="Label" parent="HeartPickup"]
+offset_left = 19.0
+offset_top = -10.0
+offset_right = 59.0
+offset_bottom = 13.0
+text = "0"

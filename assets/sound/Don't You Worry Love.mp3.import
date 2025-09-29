@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://byrvpt8knqb1c"
+path="res://.godot/imported/Don't You Worry Love.mp3-5a0a930252e7deb90fdfd19141072c02.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/Don't You Worry Love.mp3"
+dest_files=["res://.godot/imported/Don't You Worry Love.mp3-5a0a930252e7deb90fdfd19141072c02.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
