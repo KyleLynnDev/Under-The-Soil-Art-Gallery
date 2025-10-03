@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cvan5hsceprjw"
+path="res://.godot/imported/Beautiful Freedom (2025).wav-f459a97f42a23aa802765c8d57e7897e.sample"
+
+[deps]
+
+source_file="res://assets/sound/Beautiful Freedom (2025).wav"
+dest_files=["res://.godot/imported/Beautiful Freedom (2025).wav-f459a97f42a23aa802765c8d57e7897e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
